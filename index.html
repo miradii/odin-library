@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="style.css"
+			media="screen"
+		/>
+		<title></title>
+	</head>
+	<body>
+		<main>
+			<section class="header"><h1>Galibre</h1></section>
+			<section class="tags">
+				<h2>Tags</h2>
+				<div class="tag-container">
+					<button class="tag-button">read</button>
+					<button class="tag-button">to-read</button>
+					<button class="tag-button">currently-reading</button>
+					<button class="tag-button">all</button>
+				</div>
+			</section>
+			<section class="books">
+				<h2>
+					Books
+					<span>
+						<button class="add-btn" id="addBookBtn" icon="Add Book">
+							+
+						</button>
+					</span>
+				</h2>
+
+				<div class="book-container" id="bookContainer"></div>
+			</section>
+		</main>
+
+		<div id="addModal" class="simple-modal">
+			<div class="modal-content">
+				<div class="close-btn" id="closeModalBtn">&times;</div>
+				<h2 class="modal-title">Add a New Book</h2>
+				<div class="form-container">
+					<form class="book-form" action="">
+						<label class="text-label" for="name">
+							Name<input
+								id="name"
+								class="add-book-input"
+								type="text"
+								name="name"
+							/> </label
+						><br />
+						<label class="text-label" for="author"
+							>Author<input
+								id="author"
+								class="add-book-input"
+								type="text"
+								name="author"
+						/></label>
+
+						<label class="text-label" for="pages"
+							>Pages<input
+								id="pages"
+								class="add-book-input"
+								type="number"
+								name="pages"
+						/></label>
+						<label for="radio-read"
+							><input
+								name="read-status"
+								id="radio-read"
+								type="radio"
+								value="read"
+							/>I have read this book</label
+						>
+						<label for="radio-currentlyreading"
+							><input
+								name="read-status"
+								id="radio-currentlyreading"
+								type="radio"
+								value="currently-reading"
+							/>I am currently reading this book</label
+						>
+						<label for="radio-toRead"
+							><input
+								name="read-status"
+								id="radio-toRead"
+								type="radio"
+								value="to-read"
+								checked
+							/>I want to read this book</label
+						>
+
+						<label for="submit"
+							><input
+								type="submit"
+								id="addBookBtn"
+								name="submit"
+								value="Add"
+						/></label>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
